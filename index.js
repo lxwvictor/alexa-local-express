@@ -59,12 +59,12 @@ alexaApp.intent("openSthIntent", {
       var spawn = require('child_process').spawn;
       if (serviceName == 'google') {
         console.log("in goolgle");
-        spawn('open', ['http://www.google.com']);
+        spawn('cmd', ['/c', 'start http://www.google.com'], {stdio: 'inherit'});
         response.say("Your service loaded").reprompt("Anything else I can help?").shouldEndSession(false);
       }
       else if (serviceName == "timer") {
         console.log("in timer");
-        spawn('open', ['file:///Users/Victor/Google%20Drive/OCBC/IT%20Tools/Web/TCCTimer/TccTimer.aspx.html']);
+        spawn('cmd', ['/c', 'start C:\\Users\\poc\\Desktop\\TCCTimer\\TccTimer.aspx.html'], {stdio: 'inherit'});
         response.say("Your service loaded").reprompt("Anthing else I can help?").shouldEndSession(false);
       }
       else {
@@ -127,8 +127,8 @@ var httpsPort = 443;
 https.createServer({
   //key: fs.readFileSync(__dirname + "/self_cert/private-key.pem"),
   //cert: fs.readFileSync(__dirname + "/self_cert/certificate.pem")
-  key: fs.readFileSync(__dirname + "/../cert/server.key"),
-  cert: fs.readFileSync(__dirname + "/../cert/server.crt")
+  key: fs.readFileSync(__dirname + "/../cert/jarvisServer.key"),
+  cert: fs.readFileSync(__dirname + "/../cert/jarvisServer.crt")
 }, app).listen(httpsPort);
 
 console.log("Listening on port " + httpsPort + ", try https://localhost:" + httpsPort + "/test");
