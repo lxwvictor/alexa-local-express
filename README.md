@@ -3,7 +3,7 @@ This is the testing bed of alexa apps running on local nodejs express server.
 ## Preparing the environments
 1. Install node.js and npm
 2. `npm install`
-3. `node index.js` (Do note some platforms required elevated priviledge to bind port 443)
+3. `node index.js` (Do note some platforms require elevated priviledge to bind port 443)
 ## Functions
 ### Open a webpage or any local files
 A `openSthIntent` intent from Alexa will trigger a webpage or any local file.
