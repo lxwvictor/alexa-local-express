@@ -4,7 +4,8 @@ This is the testing bed of alexa apps running on local nodejs express server.
 1. Install node.js and npm
 2. `npm install`
 3. https is mandatory for Alexa calls. Below is simple guide on creating self-signed certificate.
-`// create a self signed cert
+```
+// create a self signed cert
 openssl req -x509 -newkey rsa:2048 -sha256 -exfile v3.ext -keyout key.pem -out cert.pem -days 3650
 openssl rsa -in key.pem -out newkey.pem && mv newkey.pem key.pem
 
@@ -16,7 +17,8 @@ sudo openssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreate
 openssl x509 -text -in server.crt -noout
 
 // create a pfx file from the crt and key files
-openssl pkcs12 -export -out domain.name.pfx -inkey domain.name.key -in domain.name.crt`
+openssl pkcs12 -export -out domain.name.pfx -inkey domain.name.key -in domain.name.crt
+```
 4. `node index.js` (Do note some platforms require elevated priviledge to bind port 443)
 ## Functions
 ### Open a webpage or any local files
