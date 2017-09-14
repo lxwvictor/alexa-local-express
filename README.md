@@ -1,7 +1,7 @@
 # Alexa-Local-Express
 This is the testing bed of alexa apps running on local nodejs express server.
 ## Preparing the environments
-1. Install node.js and npm
+1. Install node.js and npm, download the repository.
 2. `npm install`
 3. https is mandatory for Alexa calls. Below is a simple guide on creating self-signed certificates in different ways.
 ```
